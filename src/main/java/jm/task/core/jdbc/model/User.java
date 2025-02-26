@@ -52,6 +52,15 @@ public class User {
         this.lastName = lastName;
     }
 
+    @Override
+    public String toString() {
+        return "User (" +
+                "age = " + age +
+                ", name = " + name +
+                ", lastName = " + lastName +
+                ')';
+    }
+
     public Byte getAge() {
         return age;
     }
