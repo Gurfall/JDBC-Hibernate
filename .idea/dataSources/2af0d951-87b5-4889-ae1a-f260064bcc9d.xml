@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>1131</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1213</IntrospectionStateNumber>
       <ServerVersion>17.3</ServerVersion>
-      <StartupTime>1740481615</StartupTime>
+      <StartupTime>1740587927</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -801,7 +801,7 @@ false Zulu
 14751||10|C|G
 14751||-9223372036854775808|U|G
 14751||10|U|G</Grants>
-      <IntrospectionStateNumber>1131</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1213</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4223,52 +4223,64 @@ false Zulu
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1131</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-02-25.14:02:50</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1213</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-02-27.08:45:07</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="265" parent="264" name="users_id_seq">
-      <ObjectId>24936</ObjectId>
+    <sequence id="265" parent="264" name="hibernate_sequence">
+      <ObjectId>25029</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1125</StateNumber>
-      <StoredType>integer|0s</StoredType>
+      <StateNumber>1185</StateNumber>
+      <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="266" parent="264" name="users">
-      <ObjectId>24937</ObjectId>
-      <StateNumber>1130</StateNumber>
+    <table id="266" parent="264" name="User">
+      <ObjectId>25045</ObjectId>
+      <StateNumber>1212</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <column id="267" parent="266" name="id">
-      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1125</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <SequenceId>24936</SequenceId>
-      <TypeId>23</TypeId>
+      <StateNumber>1212</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <TypeId>20</TypeId>
     </column>
     <column id="268" parent="266" name="name">
       <Position>2</Position>
-      <StateNumber>1125</StateNumber>
-      <StoredType>varchar|0s</StoredType>
+      <StateNumber>1212</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="269" parent="266" name="lastname">
       <Position>3</Position>
-      <StateNumber>1125</StateNumber>
-      <StoredType>varchar|0s</StoredType>
+      <StateNumber>1212</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="270" parent="266" name="age">
       <Position>4</Position>
-      <StateNumber>1125</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
+      <StateNumber>1212</StateNumber>
+      <StoredType>smallint|0s</StoredType>
+      <TypeId>21</TypeId>
     </column>
+    <index id="271" parent="266" name="pk_user">
+      <ColNames>id</ColNames>
+      <ObjectId>25050</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1212</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="272" parent="266" name="pk_user">
+      <ObjectId>25051</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1212</StateNumber>
+      <UnderlyingIndexId>25050</UnderlyingIndexId>
+    </key>
   </database-model>
 </dataSource>
